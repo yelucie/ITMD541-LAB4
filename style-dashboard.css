@@ -1,0 +1,15 @@
+body {
+    background-image: url("./img/backgrounds/dashboard.jpg");
+}
+
+.search-input,
+.search-btn,
+button {
+    color: #DCC0A9;
+    background-color: #423E53;
+}
+
+.search-input {
+    color:  #423E53;
+    background-color: rgba(255, 255, 255, 0.5);
+}

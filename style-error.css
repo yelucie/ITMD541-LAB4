@@ -1,0 +1,45 @@
+body {
+    background-image: url("./img/backgrounds/not-found.png");
+    overflow: hidden;
+}
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45vh;
+    color: #E7F3F6;
+}
+
+h1 {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.not-found p {
+    margin-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 28px;
+    color: #E7F3F6;
+}
+
+.search-input,
+.search-btn,
+button {
+    color: #66B7D9;
+    background-color: #1A3143;
+}
+
+.search-input {
+    color:  #1A3143;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+    color: #66B7D9;
+}
+
+footer a {
+    color: #E7F3F6;
+}

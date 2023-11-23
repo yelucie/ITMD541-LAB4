@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunset and Sunrise times</title>
     <link href="style-common.css" rel="stylesheet">
-    <link href="style-landing.css" rel="stylesheet">
+    <link href="style-dashboard.css" rel="stylesheet">
     <link href="font.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,22 +16,22 @@
 <body>
     <header>
         <a href="/" id="home"><img src="./img/logo.png" alt="Sunrise-Sunset Logo"></a>
+        <div class="user-search">
+            <button type="button" id="find-location">FIND MY LOCATION</button>
+            <div class="input-group">
+                <input type="text" class="search-input" id="location" placeholder="Look up sunset and sunrise times">
+                <span class="input-group-btn">
+                    <button type="submit" class="search-btn" data-target="#search-form" id="search-btn"><i
+                            class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
     </header>
-    <div class="content">
-        <div class="welcome">
-            <h1>Welcome to<br>Lucie Ye's ITMD 541 lab</h1>
-            <p>The tool to find sunrise and sunset times in your city.</p>
-        </div>
-
-        <div class="input-group">
-            <input type="text" class="search-input" id="location" placeholder="Look up sunset and sunrise times">
-            <span class="input-group-btn">
-                <button type="submit" class="search-btn" data-target="#search-form" id="search-btn"><i
-                        class="fa fa-search"></i></button>
-            </span>
-        </div>
-        <button type="button" id="find-location">FIND MY LOCATION</button>
+    <div class="intro">
+        <h1>Sunset and Sunrise Times</h1>
+        <p>Here are the times for CityName.</p>
     </div>
+
     <footer>
         <p>Powered by <a href="https://sunrisesunset.io">SunriseSunset.io</a></p>
     </footer>

@@ -1,0 +1,82 @@
+body {
+    background-image: url("./img/backgrounds/landing.jpg");
+    overflow: hidden;
+}
+
+#home img {
+    position: absolute;
+    top: 4vh;
+    left: 4vh;
+    width: 260px;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #584B86;
+    font-size: 65px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+}
+
+.welcome p {
+    font-size: 30px;
+    color: #584B86;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-top: 30px;
+}
+
+.search-input,
+.search-btn,
+button {
+    padding: 20px 34px;
+    border: none;
+    border-radius: 50px;
+    font-size: 30px;
+    font-family: 'Questrial';
+    background-color: #584B86;
+    color: #DCC0A9;
+    cursor: pointer;
+}
+
+.search-input {
+    font-family: 'Questrial';
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 500px;
+    cursor: text;
+}
+
+.search-btn {
+    margin-left: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.search-input {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #584B86;
+}
+
+#find-location {
+    margin-top: 20px;
+    height: 55px;
+}
+
+footer {
+    color: #A78BAF;
+}
+
+footer a {
+    color: rgb(249,238,207);
+}

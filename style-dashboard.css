@@ -13,3 +13,68 @@ button {
     color:  #423E53;
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+.intro p {
+    font-family: 'Questrial';
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 4vh;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.info {
+    flex: 1;
+    padding: 4vh;
+    margin-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 5px;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+}
+
+.details {
+    margin-top: 10px;
+    padding: 40px;
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.19);
+    border: none;
+    border-radius: 20px;
+}
+
+.details img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.details p {
+    font-family: 'Questrial';
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 22px;
+}
+
+.sun {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.sunrise,
+.sunset,
+.solar-noon,
+.day-length {
+    text-align: center;
+    padding: 14px;
+}
+
+footer {
+    position: static;
+}

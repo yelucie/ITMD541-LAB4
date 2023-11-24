@@ -27,7 +27,6 @@ button {
 }
 
 .info {
-    flex: 1;
     padding: 4vh;
     margin-top: 50px;
 }
@@ -72,7 +71,7 @@ h2 {
 .solar-noon,
 .day-length {
     text-align: center;
-    padding: 14px;
+    padding: 22px;
 }
 
 footer {

@@ -79,6 +79,10 @@ function createInfo(dashboardDiv, today, data) {
     // Append elements to their parent containers
     detailsDiv.appendChild(sunDiv);
 
+    // Create solar noon and day length div
+    createDivWithoutIcon(true, detailsDiv, data);
+    createDivWithoutIcon(false, detailsDiv, data);
+
     infoDiv.appendChild(h2);
     infoDiv.appendChild(detailsDiv);
 
@@ -109,4 +113,19 @@ function createDivWithIcon(sunrise, sunDiv, data) {
     div.appendChild(extra);
 
     sunDiv.appendChild(div);
+}
+
+function createDivWithoutIcon(solarNoon, detailsDiv, data) {
+    // Create div
+    var div = document.createElement('div');
+    div.className = solarNoon ? 'solar-noon' : 'day-length';
+
+    // Create p element for sunrise
+    var p = document.createElement('p');
+    p.textContent = solarNoon ? `The solar noon happens at ${data.solarNoon}.` : `This day's length is ${data.dayLength}.`;
+
+    // Append element to their parent containers
+    div.appendChild(p);
+
+    detailsDiv.appendChild(div);
 }

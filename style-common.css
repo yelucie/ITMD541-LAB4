@@ -94,7 +94,6 @@ input:focus {
 }
 
 footer {
-    position: fixed;
     bottom: 4vh;
     right: 4vh;
     margin: 10px;

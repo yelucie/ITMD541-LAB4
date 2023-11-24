@@ -75,5 +75,12 @@ h2 {
 }
 
 footer {
-    position: static;
+    bottom: -240px;
+    color: #423E53;
+    position: absolute;
+    padding-bottom: 4vh
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.75);
 }

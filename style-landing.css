@@ -74,6 +74,7 @@ button {
 }
 
 footer {
+    position: fixed;
     color: #A78BAF;
 }
 

@@ -48,12 +48,14 @@ footer a {
 /* For small screens */
 @media only screen and (max-width: 1075px) {
     .not-found {
-        margin-top: 50px;
+        margin-top: 45px;
         padding: 15px;
     }
 
     h1 {
+        font-size: 45px;
         color: #1A3143;
+        text-align: center;
     }
 
     .not-found p {

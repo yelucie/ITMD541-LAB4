@@ -95,11 +95,16 @@ footer a {
         font-size: 25px;
     }
 
+    .info p {
+        margin-bottom: 5px;
+    }
+
     h1, h2 {
         font-size: 40px;
     }
 
     footer {
+        color: #DCC0A9;
         bottom: 0;
         position: relative;
     }
@@ -112,6 +117,7 @@ footer a {
     }
 
     footer {
+        color: #DCC0A9;
         bottom: 0;
         position: relative;
     }

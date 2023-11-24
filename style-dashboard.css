@@ -98,11 +98,21 @@ footer a {
     h1, h2 {
         font-size: 40px;
     }
+
+    footer {
+        bottom: 0;
+        position: relative;
+    }
 }
 
 /* For medium screens */
 @media only screen and (min-width: 681px) and (max-width: 1074px) {
     .dashboard {
         flex-direction: column;
+    }
+
+    footer {
+        bottom: 0;
+        position: relative;
     }
 }

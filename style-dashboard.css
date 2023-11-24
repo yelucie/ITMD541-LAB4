@@ -10,7 +10,7 @@ button {
 }
 
 .search-input {
-    color:  #423E53;
+    color: #423E53;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -83,4 +83,26 @@ footer {
 
 footer a {
     color: rgba(255, 255, 255, 0.75);
+}
+
+/* For small screens */
+@media only screen and (max-width: 680px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .intro p {
+        font-size: 25px;
+    }
+
+    h1, h2 {
+        font-size: 40px;
+    }
+}
+
+/* For medium screens */
+@media only screen and (min-width: 681px) and (max-width: 1074px) {
+    .dashboard {
+        flex-direction: column;
+    }
 }

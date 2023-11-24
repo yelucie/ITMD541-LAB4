@@ -15,6 +15,7 @@ h1 {
     text-align: center;
     color: #584B86;
     font-size: 65px;
+    margin: 0;
 }
 
 .content {
@@ -32,6 +33,7 @@ h1 {
 }
 
 .input-group {
+    margin: 0;
     margin-top: 30px;
 }
 
@@ -53,7 +55,7 @@ button {
     background-color: rgba(255, 255, 255, 0.5);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    width: 500px;
+    width: 350px;
     cursor: text;
 }
 
@@ -79,5 +81,82 @@ footer {
 }
 
 footer a {
-    color: rgb(249,238,207);
+    color: rgb(249, 238, 207);
+}
+
+/* For small screens */
+@media only screen and (max-width: 600px) {
+
+    /* Adjust styles for small screens */
+    .search-input {
+        width: 200px;
+    }
+
+    #find-location {
+        height: 40px;
+        /* Adjust the height for small screens */
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .welcome p {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* For medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    /* Adjust styles for medium screens */
+    .search-input {
+        width: 300px;
+    }
+
+    #find-location {
+        height: 45px;
+        /* Adjust the height for medium screens */
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .welcome p {
+        font-size: 25px;
+    }
+
+    footer {
+        font-size: 18px;
+    }
+}
+
+/* For large screens */
+@media only screen and (min-width: 1025px) {
+
+    /* Adjust styles for large screens */
+    .search-input {
+        width: 500px;
+    }
+
+    #find-location {
+        height: 55px;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    .welcome p {
+        font-size: 30px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
 }

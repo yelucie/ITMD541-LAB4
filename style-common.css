@@ -24,7 +24,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 3vh;
+    margin-top: 3.5vh;
 }
 
 #home img {
@@ -35,7 +35,8 @@ header {
     height: auto;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Agrandir';
     font-weight: bolder;
     text-align: left;
@@ -98,4 +99,85 @@ footer {
     right: 4vh;
     margin: 10px;
     text-align: right;
+}
+
+/* For small screens */
+@media only screen and (max-width: 680px) {
+    #home img {
+        width: 180px;
+    }
+
+    header {
+        justify-content: center;
+        padding: 4vh;
+    }
+    
+    .search-input {
+        width: 200px;
+    }
+
+    #find-location {
+        height: 40px;
+        margin-top: 14px;
+    }
+
+    .user-search {
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-top: 12vh;
+    }
+
+    .input-group {
+        margin-left: 0px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* For medium screens */
+@media only screen and (min-width: 681px) and (max-width: 1074px) {
+    #home img {
+        width: 220px;
+    }
+
+    .search-input {
+        width: 200px;
+    }
+
+    #find-location {
+        height: 40px;
+        margin: 0;
+        margin-left: auto;
+        margin-top: 14px;
+    }
+
+    .user-search {
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-right: 2vh;
+    }
+
+    .input-group {
+        margin-left: 0px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+/* For large screens */
+@media only screen and (min-width: 1075px) {
+    #home img {
+        width: 260px;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 20px;
+    }
 }

@@ -75,10 +75,7 @@ h2 {
 }
 
 footer {
-    bottom: -240px;
     color: #423E53;
-    position: absolute;
-    padding-bottom: 4vh
 }
 
 footer a {
@@ -92,7 +89,7 @@ footer a {
     }
 
     .intro p {
-        font-size: 25px;
+        font-size: 19px;
         margin-right: 4vh;
     }
 
@@ -101,13 +98,16 @@ footer a {
     }
 
     h1, h2 {
-        font-size: 35px;
+        margin-top: 2vh;
+        font-size: 30px;
     }
 
-    footer {
-        color: #DCC0A9;
-        bottom: 0;
-        position: relative;
+    .details img {
+        width: 70%;
+    }
+
+    .details p {
+        font-size: 16px;
     }
 }
 
@@ -120,11 +120,5 @@ footer a {
     .intro p {
         font-size: 25px;
         margin-right: 4vh;
-    }
-
-    footer {
-        color: #DCC0A9;
-        bottom: 0;
-        position: relative;
     }
 }

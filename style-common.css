@@ -45,6 +45,7 @@ h2 {
     font-size: 60px;
     margin-top: 45px;
     margin-left: 4vh;
+    margin-right: 4vh;
 }
 
 .input-group {
@@ -113,7 +114,7 @@ footer {
     }
     
     .search-input {
-        width: 200px;
+        width: 70%;
     }
 
     #find-location {
@@ -133,7 +134,6 @@ footer {
 
     footer {
         font-size: 14px;
-        padding: 10px;
     }
 }
 
@@ -144,7 +144,7 @@ footer {
     }
 
     .search-input {
-        width: 200px;
+        width: 70%;
     }
 
     #find-location {

@@ -10,6 +10,8 @@ window.addEventListener('DOMContentLoaded', function () {
         createIntroDiv(storedCityName, dataToday.timezone);
         createDashboardDiv([dataToday, dataTomorrow]);
 
+        createFooter();
+
     } else {
         // Handle the case where data is not available
         console.error('Stored data not found.');
@@ -101,11 +103,11 @@ function createDivWithIcon(sunrise, sunDiv, data) {
 
     // Create p element for sunrise
     var p = document.createElement('p');
-    p.textContent = sunrise ? `Sunrise: ${data.sunrise}` : `Sunset: ${data.sunset}`;
+    p.textContent = sunrise ? `Sunrise:\n${data.sunrise}` : `Sunset:\n${data.sunset}`;
 
     // Create p element for dawn
     var extra = document.createElement('p');
-    extra.textContent = sunrise ? `Dawn: ${data.dawn}` : `Dusk: ${data.dusk}`;
+    extra.textContent = sunrise ? `Dawn:\n${data.dawn}` : `Dusk:\n${data.dusk}`;
 
     // Append elements to their parent containers
     div.appendChild(icon);
@@ -128,4 +130,14 @@ function createDivWithoutIcon(solarNoon, detailsDiv, data) {
     div.appendChild(p);
 
     detailsDiv.appendChild(div);
+}
+
+function createFooter(){
+    // Create containers
+    var footer = document.createElement('footer');
+    var p = document.createElement('p');
+    p.innerHTML = 'Powered by <a href="https://sunrisesunset.io">SunriseSunset.io</a>"';
+
+    footer.appendChild(p);
+    document.body.appendChild(footer);
 }

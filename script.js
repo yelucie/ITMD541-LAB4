@@ -10,8 +10,8 @@ window.addEventListener('DOMContentLoaded', function () {
                 .then(coordinates => {
                     // Use Promise.all to handle multiple promises
                     return Promise.all([
-                        getData(coordinates.lat, coordinates.lon, false),
-                        getData(coordinates.lat, coordinates.lon, true)
+                        getData(coordinates.place, coordinates.lat, coordinates.lon, false),
+                        getData(coordinates.place, coordinates.lat, coordinates.lon, true)
                     ]);
                 })
                 .then(([dataToday, dataTomorrow]) => {

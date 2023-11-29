@@ -11,11 +11,10 @@ window.addEventListener('DOMContentLoaded', function () {
                     // Use Promise.all to handle multiple promises
                     return Promise.all([
                         getData(coordinates.lat, coordinates.lon, false),
-                        getData(coordinates.lat, coordinates.lon, true),
-                        getCityName(coordinates.lat, coordinates.lon)
+                        getData(coordinates.lat, coordinates.lon, true)
                     ]);
                 })
-                .then(([dataToday, dataTomorrow, cityName]) => {
+                .then(([dataToday, dataTomorrow]) => {
                     // Handle the data for today
                     localStorage.removeItem('apiDataToday');
                     localStorage.setItem('apiDataToday', JSON.stringify(dataToday));
@@ -26,7 +25,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
                     // Handle the city's name
                     localStorage.removeItem('cityName');
-                    localStorage.setItem('cityName', JSON.stringify(cityName));
+                    localStorage.setItem('cityName', JSON.stringify(dataToday.place));
 
                     window.location.href = './dashboard.html';
                 })
@@ -73,7 +72,7 @@ function redirectToErrorPage() {
     window.location.href = './error.html';
 }
 
-function getData(latitude, longitude, tomorrow) {
+function getData(place, latitude, longitude, tomorrow) {
     let sunriseUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow`;
 
     if (!tomorrow) {
@@ -92,7 +91,7 @@ function getData(latitude, longitude, tomorrow) {
                 const solarNoon = results.solar_noon;
                 const dayLength = results.day_length;
                 const timezone = results.timezone;
-                resolve({ sunrise, dawn, sunset, dusk, solarNoon, dayLength, timezone });
+                resolve({ place, sunrise, dawn, sunset, dusk, solarNoon, dayLength, timezone });
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -110,7 +109,8 @@ function getCoordinates(address) {
             .then(data => {
                 const lat = data[0].lat;
                 const lon = data[0].lon;
-                resolve({ lat, lon });
+                const place = address.charAt(0).toUpperCase() + address.slice(1).toLowerCase();
+                resolve({ lat, lon, place});
             })
             .catch(error => {
                 console.error('Error:', error);

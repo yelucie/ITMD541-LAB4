@@ -103,7 +103,7 @@ footer {
 }
 
 /* For small screens */
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 790px) {
     #home img {
         width: 180px;
     }

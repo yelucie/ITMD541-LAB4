@@ -44,7 +44,7 @@ footer a {
     color: #E7F3F6;
 }
 
-/* For small screens */
+/* For medium screens */
 @media only screen and (max-width: 1075px) {
     .not-found {
         margin-top: 45px;

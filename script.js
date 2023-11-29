@@ -40,30 +40,32 @@ window.addEventListener('DOMContentLoaded', function () {
     geolocation.addEventListener('click', () => {
         navigator.geolocation.getCurrentPosition(
             (position) => {
-                Promise.all([
-                    getData(position.coords.latitude, position.coords.longitude, false),
-                    getData(position.coords.latitude, position.coords.longitude, true),
-                    getCityName(position.coords.latitude, position.coords.longitude)
-                ])
-                    .then(([dataToday, dataTomorrow, cityName]) => {
-                        // Handle the data for today
-                        localStorage.removeItem('apiDataToday');
-                        localStorage.setItem('apiDataToday', JSON.stringify(dataToday));
+                getCityName(position.coords.latitude, position.coords.longitude)
+                    .then(cityName => {
+                        Promise.all([
+                            getData(cityName, position.coords.latitude, position.coords.longitude, false),
+                            getData(cityName, position.coords.latitude, position.coords.longitude, true),
+                        ])
+                            .then(([dataToday, dataTomorrow]) => {
+                                // Handle the data for today
+                                localStorage.removeItem('apiDataToday');
+                                localStorage.setItem('apiDataToday', JSON.stringify(dataToday));
 
-                        // Handle the data for tomorrow
-                        localStorage.removeItem('apiDataTomorrow');
-                        localStorage.setItem('apiDataTomorrow', JSON.stringify(dataTomorrow));
+                                // Handle the data for tomorrow
+                                localStorage.removeItem('apiDataTomorrow');
+                                localStorage.setItem('apiDataTomorrow', JSON.stringify(dataTomorrow));
 
-                        // Handle the city's name
-                        localStorage.removeItem('cityName');
-                        localStorage.setItem('cityName', JSON.stringify(cityName));
+                                // Handle the city's name
+                                localStorage.removeItem('cityName');
+                                localStorage.setItem('cityName', JSON.stringify(cityName));
 
-                        window.location.href = './dashboard.html';
+                                window.location.href = './dashboard.html';
+                            })
+                        .catch(error => {
+                            console.error("Failed to get coordinates:", error);
+                            redirectToErrorPage();
+                        });
                     })
-                    .catch(error => {
-                        console.error("Failed to get coordinates:", error);
-                        redirectToErrorPage();
-                    });
             })
     });
 });
